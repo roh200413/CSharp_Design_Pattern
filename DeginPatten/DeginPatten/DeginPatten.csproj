@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="CommandPattern.cs" />
     <Compile Include="ObjectpollPattern.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProxyPattern.cs" />
     <Compile Include="ProxyPattern2.cs" />
