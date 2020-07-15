@@ -4,13 +4,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DeginPatten
 {
-    class ObjectpollPattern
-    {
-    }
     public class MyConnection
     {
         public MyConnection()
@@ -53,6 +51,30 @@ namespace DeginPatten
 
             MyConnection conn2 = myPool.GetObject();
             myPool.ReleaseObject(conn2);
+        }
+    }
+    ////////////////////////////////////////////////////////////////////////
+
+    class ObjectpollPattern
+    {
+       public ObjectpollPattern()
+        {
+            ThreadPool.QueueUserWorkItem(Calc);
+            ThreadPool.QueueUserWorkItem(Calc, 10.0);
+            ThreadPool.QueueUserWorkItem(Calc, 20.0);
+
+            Console.ReadLine();
+            
+        }
+        static void Calc(object radius)
+        {
+            if (radius == null)
+            {
+                return;
+            }
+            double r = (double)radius;
+            double area = r * r * 3.14;
+            Console.WriteLine("r={0}, area={1}", r, area);
         }
     }
 }
