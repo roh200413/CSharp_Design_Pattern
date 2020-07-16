@@ -16,6 +16,13 @@ namespace DeginPatten
             Adapter adapter = new Adapter();
             adapter.Request();
         }
+
+        private ITarget target;
+        public void Operation2()
+        {
+            target.Request();
+        }
+
     }
     public class Adapter
     {
@@ -28,6 +35,28 @@ namespace DeginPatten
     }
 
     public class Adaptee
+    {
+        public void AdapteeRequest()
+        {
+
+        }
+    }
+
+    //////////////////////////////////////////////
+    
+    public interface ITarget
+    {
+        void Request();
+    }
+    public class Adapter2 : Adaptee2, ITarget
+    {
+        public void Request()
+        {
+            base.AdapteeRequest();
+        }
+    }
+
+    public class Adaptee2
     {
         public void AdapteeRequest()
         {
