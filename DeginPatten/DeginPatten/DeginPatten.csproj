@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdapterPattern.cs" />
     <Compile Include="CommandPattern.cs" />
     <Compile Include="ObjectpollPattern.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
