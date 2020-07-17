@@ -6,10 +6,6 @@ using System.Threading.Tasks;
 
 namespace DeginPatten
 {
-    class BridgePattern
-    {
-    }
-
     public abstract class Abstraction
     {
         public IImplementor Implementor { get; set; }
