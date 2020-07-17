@@ -47,7 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdapterPattern.cs" />
+    <Compile Include="AdapterPattern2.cs" />
+    <Compile Include="BridgePattern.cs" />
     <Compile Include="CommandPattern.cs" />
+    <Compile Include="FileSystemObjectClass.cs" />
     <Compile Include="ObjectpollPattern.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProxyPattern.cs" />
