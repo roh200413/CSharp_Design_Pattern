@@ -50,6 +50,7 @@
     <Compile Include="AdapterPattern2.cs" />
     <Compile Include="BridgePattern.cs" />
     <Compile Include="CommandPattern.cs" />
+    <Compile Include="CompositePattern.cs" />
     <Compile Include="FileSystemObjectClass.cs" />
     <Compile Include="ObjectpollPattern.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
