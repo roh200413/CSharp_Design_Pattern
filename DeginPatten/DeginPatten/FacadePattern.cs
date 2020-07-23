@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -57,6 +59,37 @@ namespace DeginPatten
         public static void howToUse()
         {
             Facade.PrintPicture(1001);
+        }
+    }
+
+
+
+    class Facade_Note
+    {
+        public void Case_WebRequest()
+        {
+            string url = "https://httpbin.org/get";
+            string responseText = string.Empty;
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = "GET";
+
+            using (HttpWebResponse resp = (HttpWebResponse)request.GetResponse())
+            {
+                Stream respStream = resp.GetResponseStream();
+                using (StreamReader sr = new StreamReader(respStream))
+                {
+                    responseText = sr.ReadToEnd();
+                }
+            }
+
+            Console.WriteLine(responseText);
+        }
+
+        public void Case_WebClient()
+        {
+            var web = new WebClient();
+            Console.WriteLine(web.DownloadString("https://httpbin.org/get"));
         }
     }
 }
