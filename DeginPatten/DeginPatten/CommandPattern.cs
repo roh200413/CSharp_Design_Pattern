@@ -70,7 +70,7 @@ namespace DeginPatten
         }
     }
 
-    class Client
+    class CommandClient
     {
         public static void HowToUse()
         {
