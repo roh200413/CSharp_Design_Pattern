@@ -80,6 +80,7 @@
     <Compile Include="ProxyPattern2.cs" />
     <Compile Include="SingletonPattern.cs" />
     <Compile Include="SingletonPattern2.cs" />
+    <Compile Include="VisitorPattern.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
