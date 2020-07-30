@@ -81,6 +81,8 @@
     <Compile Include="SingletonPattern.cs" />
     <Compile Include="SingletonPattern2.cs" />
     <Compile Include="VisitorPattern.cs" />
+    <Compile Include="VisitorPattern2.cs" />
+    <Compile Include="VisitorPattern3.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
