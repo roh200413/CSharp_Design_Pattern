@@ -81,6 +81,7 @@
     <Compile Include="ProxyPattern2.cs" />
     <Compile Include="SingletonPattern.cs" />
     <Compile Include="SingletonPattern2.cs" />
+    <Compile Include="StrategyPattern.cs" />
     <Compile Include="VisitorPattern.cs" />
     <Compile Include="VisitorPattern2.cs" />
     <Compile Include="VisitorPattern3.cs" />
