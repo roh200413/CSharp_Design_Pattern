@@ -102,4 +102,36 @@ namespace DeginPatten
             chkout.Charge(30000);
         }
     }
+
+
+///////////////////////////////////////////////////////////////////
+
+    class Strategy2Client
+    {
+        public static void HowToTest()
+        {
+            var scores = new List<int>
+            {
+                8,5,1,4,9,2
+            };
+
+            scores.Sort(new AscendingSort());
+
+            scores.Sort(new DescendingSort());
+        }
+    }
+
+    class AscendingSort : IComparer<int>
+    {
+        public int Compare(int x, int y)
+        {
+            return x - y;
+        }
+    }
+
+    class DescendingSort : IComparer<int>
+    {
+        public int Compare(int x, int y)
+            => y - x;
+    }
 }
