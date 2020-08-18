@@ -35,12 +35,54 @@ namespace DeginPatten
                 this.Next.Process(cmdType, request);
             }
         }
-        
+    }
 
+    public class ConcreteHandler2 : Handler
+    {
+        public override void Process(CommandType cmdType, string request)
+        {
+            if (cmdType == CommandType.CommandType1)
+            {
+                Console.WriteLine($"Handled in ConcreteHandler2");
+            }
+            else
+            {
+                this.Next.Process(cmdType, request);
+            }
+        }
+    }
+    public class ConcreteHandler3 : Handler
+    {
+        public override void Process(CommandType cmdType, string request)
+        {
+            if (cmdType == CommandType.CommandType1)
+            {
+                Console.WriteLine($"Handled in ConcreteHandler3");
+            }
+            else
+            {
+                this.Next.Process(cmdType, request);
+            }
+        }
     }
 
     class ChainOfResposibilityClient
     {
+        public static void HowToUse()
+        {
+            var chainHead = BuildChain();
+            chainHead.Process(CommandType.CommandType2, "data");
+        }
 
+        private static Handler BuildChain()
+        {
+            var c1 = new ConcreteHandler1();
+            var c2 = new ConcreteHandler2();
+            var c3 = new ConcreteHandler3();
+
+            c1.Next = c2;
+            c2.Next = c3;
+            return c1;
+        }
     }
 }
